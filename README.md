@@ -1,0 +1,5 @@
+## Project Overview
+S4 is a solver for semidefinite optimization problems written in MATLAB. It accepts problems in [SDPA Format](http://plato.asu.edu/ftp/sdpa_format.txt) and will print intermediate information regarding solver progress at each iteration. This solver is naively implemented and memory inefficient, therefore a "simple solver" for "small SDPs". However, with less than 500 lines total of well-commented code, this project is ideal for learning about semidefinite optimization. The algorithm used is described in "Solving semidefinite-quadratic-linear programs using SDPT3" by Tutuncu, Toh, and Todd and further implementation details are described in "On the Nesterov-Todd Direction in Semidefinite Programming" by the same authors.
+
+## Usage
+The main solver is contained in `S4.m` and all other files are helper functions which are called during each iteration of the solver. To invoke the solver, call `S4(filename)`, where `filename` is in SDPA format. Several example problems are provided in the `problems` directory, and more can be found online [here](http://plato.asu.edu/ftp/sdp/).
